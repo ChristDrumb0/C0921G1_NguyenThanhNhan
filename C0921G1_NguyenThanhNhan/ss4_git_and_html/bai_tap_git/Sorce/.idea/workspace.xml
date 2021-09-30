@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="05dbb71c-0ea5-4fed-89f4-3b0ad476f764" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/New.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Bai 1_cach hoc va quang ly cv bang Kanban/chung_chi.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai 2_nhap mon tu duy lap trinh/Chung_Chi_Bai_2.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai3_thuat toan/baitap_chuyen_doi_ngoai_te.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai3_thuat toan/baitap_gia_tri_lon_nhat_trong_mot_day_so.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai3_thuat toan/baitap_thuat_toan_co_cau_truc_dieu_kien.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai3_thuat toan/baitap_tim_gia_tri_lon_nhat_trong_ba_so.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai3_thuat toan/baitap_tinh_diem_trung_binh.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai3_thuat toan/thuchanh_chuyen_doi_nhiet_do.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../bai3_thuat toan/thuchanh_game_doan_so.docx" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="1yqFqBWXnqHXwkp3IIo0AMdx4Og" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="05dbb71c-0ea5-4fed-89f4-3b0ad476f764" name="Default Changelist" comment="" />
+      <created>1632971399470</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1632971399470</updated>
+      <workItem from="1632971404104" duration="2555000" />
+      <workItem from="1632979530860" duration="1296000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="283" y="86" key="RollbackChangesDialog" timestamp="1632980023764">
+      <screen x="0" y="0" width="1304" height="768" />
+    </state>
+    <state x="283" y="86" key="RollbackChangesDialog/0.0.1304.768@0.0.1304.768" timestamp="1632980023764" />
+  </component>
+</project>
