@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TaoFormCoBan</title>
+</head>
+<body>
+<form action="TaoFormCoBan.html", method="get">
+    <h2>Order form</h2>
+    <p>What would you like to buy?</p>
+    <select>
+        <option value = "tshirt">Tshirt white($10)</option>
+        <option value = "tshirt">Tshirt Red($10)</option>
+        <option value = "tshirt">Tshirt Black($10)</option>
+    </select>
+    <p>How many would you like to order</p>
+
+    <input type="radio" name="amount"/> 1 - $10 <br/>
+    <input type="radio" name="amount"/> 2 - $20 <br/>
+    <input type="radio" name="amount"/> 3 - $30 <br/>
+
+    <p>Name</p>
+    <input type="text" name="firstname" required placeholder="First name" size="15"/>
+    <input type="text" name="lastname" required placeholder="Last name" size="15"/>
+    <p>Email</p>
+    <input type = "text" name="email" size="35"/>
+    <p>Phone Number</p>
+    <input type = "text" name="phone1" size="5"/> -
+    <input type = "text" name="phone2" size="5"/> -
+    <input type = "text" name="phone3" size="5"/>
+    <p><input type = "button" name="Submit" value="Submit"/></p>
+</form>
+
+</body>
+</html>

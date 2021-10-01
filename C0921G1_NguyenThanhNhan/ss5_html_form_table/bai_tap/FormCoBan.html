@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo form đơn giản</title>
+</head>
+<body>
+<form   action="FormCoBan.html" method="post">
+    <h2>Sở Thích Của Bạn</h2>
+    <p>Họ và tên</p>
+    <label>
+        <input type="text" name="yourname" placeholder="Họ Và Tên"/>
+    </label>
+    <p>Email</p>
+    <label>
+        <input type="text" name="email" placeholder="Email"/>
+    </label>
+    <p>Sở Thích</p>
+    <label>
+    <input type="checkbox" name="hobby"/> thể thao
+    <input type="checkbox" name="hobby"/> âm nhạc
+    <input type="checkbox" name="hobby"/> đọc sách <br/>
+    <input type="checkbox" name="hobby"/> lướt web
+    <input type="checkbox" name="hobby"/> chơi game
+    <input type="checkbox" name="hobby"/> điện ảnh <br/>
+     <input type="checkbox" name="hobby"/> du lịch
+    </label>
+    <p><input type="submit" onclick="alert('Nhận được rồi nhé')" value="Gửi Thông tin"></p>
+    <p><input type="reset" onclick="alert('Điền lại đi')" value="Nhập Lại"></p>
+
+</form>
+<hr/>
+<br/>
+<form action="FormCoBan.html" method="post">
+    <h2>Đăng Ký Học Viên</h2>
+    <p>Giới Tính</p>
+    <label>
+        <input type="text" name="Your Name" placeholder="Họ và Tên">
+    </label>
+    <p>Giới Tính</p>
+    <label>
+        <input type="text" name="DoB" placeholder="Ngày Sinh">
+    </label>
+    <p>Giới Tính</p>
+    <label>
+        <input type="radio" name="Gender">
+    </label> Nam <br/>
+    <label>
+        <input type="radio" name="Gender">
+    </label> Nữ <br/>
+    <label>
+        <input type="radio" name="Gender"> Khác
+    </label>  <br/>
+
+    <p>Địa chỉ</p>
+    <label>
+        <textarea cols="30" rows="4"> </textarea>
+    </label>
+    <p>Lớp</p>
+    <label>
+        <select name="city" >
+            <option value="BSM">Business</option>
+            <option value="MKT">Marketing</option>
+            <option value="DR">Health and Medicine</option>
+            <option value="IT">IT Developer</option>
+        </select>
+    </label>
+    <p>Email</p>
+    <label>
+        <input type="text" name="email" placeholder="email">
+    </label>
+    <p>Điện Thoại</p>
+    <label>
+        <input type = "text" name="phone1" size="3" maxlength="3" /> -
+        <input type = "text" name="phone2" size="3" maxlength="3"/> -
+        <input type = "text" name="phone1" size="3" maxlength="7"/>
+    </label>
+
+    <p><input type="submit" onclick="alert('Thành Công')" value="Gửi Thông tin"></p>
+    <p><input type="reset" onclick="alert('Điền lại đi')" value="Nhập Lại"></p>
+
+</form>
+
+</body>
+</html>
