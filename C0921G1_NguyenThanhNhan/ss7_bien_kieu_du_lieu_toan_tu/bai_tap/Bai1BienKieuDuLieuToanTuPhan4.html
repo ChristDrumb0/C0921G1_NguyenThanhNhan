@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sử dụng biến, kiểu dữ liệu và toán tử 4</title>
+</head>
+<body>
+    <h2>tính chu vi hình tròn</h2>
+
+    <input type="text" placeholder="nhập bán kính hình tròn" id="inputR">
+    <button class="calculate" onclick="ketQua()">Calculate</button>
+
+    <script>
+
+        function ketQua(){
+            let r = parseInt(document.getElementById('inputR').value);
+
+            alert ("diện tích hình tròn = " + (r * 2 * 3.14) );
+        }
+    </script>
+</body>
+</html>

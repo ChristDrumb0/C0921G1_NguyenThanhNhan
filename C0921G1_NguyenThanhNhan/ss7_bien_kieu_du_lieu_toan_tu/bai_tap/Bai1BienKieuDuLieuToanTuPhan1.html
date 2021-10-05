@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sử dụng biến, kiểu dữ liệu và toán tử 1</title>
+</head>
+<body>
+<script>
+    let inputphysic;
+    let inputchemictry;
+    let inputbiological;
+
+    inputphysic = prompt ('Nhập điểm Vật Lý: ');
+    inputchemictry = prompt ('Nhập điểm Hóa Học: ');
+    inputbiological = prompt ('Nhập điểm Sinh Học: ');
+
+    let a = parseInt (inputphysic);
+    let b = parseInt (inputchemictry);
+    let c = parseInt (inputbiological);
+
+    let total = a+b+c;
+    let average = total/3;
+    document.write("The total is: " + total);
+    document.write('<br/>');
+    document.write("The average is: " + average);
+</script>
+</body>
+</html>
