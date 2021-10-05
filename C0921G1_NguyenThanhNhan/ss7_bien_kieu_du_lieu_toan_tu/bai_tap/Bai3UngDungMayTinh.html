@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng Dụng Máy Tính</title>
+</head>
+<body>
+
+<h2>Calculator</h2>
+<br />
+<input type="text" id="so1" placeholder="Nhập số đầu tiên">
+<input type="text" id="so2" placeholder="Nhập số thứ hai">
+<textarea id="ketQua" cols="20" rows="2"></textarea>
+<br/>
+<input type="button" id="cong" value="Adddition(+)" onclick="doAdd()">
+<input type="button" id="tru" value="Subtraction(-)" onclick="doSub()">
+<input type="button" id="nhan" value="Multiplication(x)" onclick="doMul()">
+<input type="button" id="chia" value="Division(/)" onclick="doDiv()">
+<!--<p id="ketQua">Kết Quả =  </p>-->
+
+<script>
+    function doAdd() {
+        let a = parseInt(document.getElementById('so1').value);
+        let b = parseInt(document.getElementById('so2').value);
+            document.getElementById('ketQua').innerText = (a+b);
+    };
+    function doSub() {
+        let a = parseInt(document.getElementById('so1').value);
+        let b = parseInt(document.getElementById('so2').value);
+        document.getElementById('ketQua').innerText = (a-b);
+
+    }
+    function doMul() {
+        let a = parseInt(document.getElementById('so1').value);
+        let b = parseInt(document.getElementById('so2').value);
+        document.getElementById('ketQua').innerText = (a*b);
+
+    }
+    function doDiv() {
+        let a = parseInt(document.getElementById('so1').value);
+        let b = parseInt(document.getElementById('so2').value);
+        document.getElementById('ketQua').innerText = (a/b);
+
+    }
+
+
+
+
+
+</script>
+</body>
+</html>

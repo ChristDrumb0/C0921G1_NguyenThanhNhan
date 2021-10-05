@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển Đổi Tiền Tệ</title>
+</head>
+<body>
+
+<h2>Chuyển đổi tiền tệ</h2>
+<h3>Amount</h3>
+<p><input type="text" id="sotien" placeholder="Nhập số tiền"></p>
+<h3>From Currency</h3>
+<p>
+    <select name="fromcurrency" id="fromCur">
+    <option value="VND">Việt Nam Đồng</option>
+    <option value="USD">Đô La Mỹ</option>
+    </select>
+</p>
+<h3>To Currency</h3>
+<p>
+    <select name="tocurrency" id="toCur">
+    <option value="USD">Đô La Mỹ</option>
+    <option value="VND">Việt Nam Đồng</option>
+    </select>
+</p>
+<input type="button" value="Convert" id="convert" onclick="doConvert()">
+<p id="ketQua">Kết quả</p>
+<script>
+    function doConvert() {
+        let C = parseInt(document.getElementById('sotien').value);
+        let select1 = document.getElementById('fromCur').value;
+        let select2 = document.getElementById('toCur').value;
+        if (select1 == select2){
+            document.getElementById ('ketQua').innerText=(C);
+        } else if (select1 == 'VND' && select2 =='USD') {
+                document.getElementById('ketQua').innerText = C/24000;
+            }else {
+                document.getElementById('ketQua').innerText = C*24000;
+            }
+
+    }
+</script>
+
+</body>
+</html>
