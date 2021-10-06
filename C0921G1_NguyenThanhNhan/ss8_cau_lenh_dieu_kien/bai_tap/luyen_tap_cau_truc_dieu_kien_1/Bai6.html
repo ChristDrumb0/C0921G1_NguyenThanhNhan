@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<h2>Tính hoa hồng nhận được tuỳ theo mức doanh số bán hàng</h2>
+<p>Giả sử là sale bảo hiểm 1 gói 10tr VND <p>
+
+<h3>Mức nhân viên</h3>
+<p>dưới 5 hợp đồng sa thải</p>
+<p>hoa hồng cho 5-9 hợp đồng  = 5%</p>
+<p>hoa hồng cho 10-14 hợp đồng = 6%</p>
+<p>hoa hồng cho 15 hợp đồng trở lên = 10%</p>
+
+<h3>Mức nhân viên cao cấp</h3>
+<p>dưới 10 HĐ gián chức</p>
+<p>hoa hồng cho 10-19 hợp đồng = 10%</p>
+<p>hoa hồng cho 20 hợp đồng trở lên = 20%</p>
+<hr>
+<h4>Chọn chức vị hiện tại</h4>
+<select name="Chọn chức vị" id="chon" >
+    <option value="NV" id="nhanvien">Nhân Viên</option>
+    <option value="CC" id="nhanviencc">Nhân Viên Cao Cấp</option>
+</select>
+<input type="text" id="sohd">
+<input type="button" id="input" onclick="tinhToan()" value="Submit">
+<script>
+function tinhToan(){
+    let sohd = parseInt(document.getElementById('sohd').value);
+    let loainv = document.getElementById('chon').value;
+    // alert (sohd)
+    // alert (loainv)
+    if (loainv === 'NV'){
+        if (sohd < 5){
+            alert ('bạn đang không phù hợp với công việc, gặp nhân sự tầng 10!')
+        }else if (sohd < 10) {
+            alert ('hoa hồng của bạn là: '+(sohd*(0.05*10000000))+'VND')
+        }else if (sohd <15 ){
+            alert ('hoa hồng của bạn là: '+(sohd*(0.06*10000000))+'VND')
+        }else {
+            alert('hoa hồng của bạn là: '+ (sohd * (0.1 * 10000000))+'VND')
+        }
+    }else if (loainv === 'CC') {
+        if (sohd<10){
+            alert ('bạn đang không đạt được performence tốt, gặp nhân sự tầng 10!')
+        }else if (sohd<20){
+            alert ('hoa hồng của bạn là: '+(sohd*(0.1*10000000))+'VND')
+        }else {
+            alert('hoa hồng của bạn là: '+(sohd*(0.2*10000000))+'VND')
+        }
+    }
+}
+</script>
+
+</body>
+</html>

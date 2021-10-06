@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<h2>Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</h2>
+<script>
+    let kt = parseInt(prompt('Nhập điểm bài kiểm tra theo thang điểm 10:','0'));
+    let gk = parseInt(prompt('Nhập điểm bài kiểm giữa kỳ theo thang điểm 10:','0'));
+    let ck = parseInt(prompt('Nhập điểm bài kiểm tra cuối kỳ theo thang điểm 10:','0'));
+    let total= ( kt + (gk*2) + (ck*3))/6 ;
+        if (total >= 8){
+            alert ('Học sinh đạt loại "Giỏi" với điểm trung bình: '+ total+'điểm');
+        }else if (total >= 6){
+            alert ('Học sinh đạt loại "Khá" với điểm trung bình: '+ total+'điểm');
+        }else if (total === 5){
+            alert ('Học sinh đạt loại "Khá" với điểm trung bình: '+ total+'điểm');
+        }else {
+            alert ('Học sinh phải tham gia "thi lại" vì điểm trung bình: '+ total+'điểm');
+        }
+
+
+</script>
+</body>
+</html>

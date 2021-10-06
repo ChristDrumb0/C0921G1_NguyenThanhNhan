@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Toan Tu Ba Ngoi</title>
+</head>
+<body>
+<script>
+    let a = prompt ("nhập a: ", '')
+    let b = prompt ("nhập a: ", '')
+
+    // if ((a + b) < 4) {
+    //     result = 'Below';
+    // } else {
+    //     result = 'Over';
+    // }
+    result = (a + b < 4) ? 'Below' : 'Over';
+        alert (result);
+
+
+    let login = prompt('bạn là ai: ', '')
+    let message;
+
+    // if (login == 'Employee') {
+    //     message = 'Hello';
+    // } else if (login == 'Director') {
+    //     message = 'Greetings';
+    // } else if (login == '') {
+    //     message = 'No login';
+    // } else {
+    //     message = '';
+    // }
+    // alert(message)
+
+    message = (login == 'Employee') ?
+        'Hello' :
+        (login== 'Director')?
+            'Greetings' :
+            (login == '') ?
+                'no login' :
+                '';
+        alert( message );
+</script>
+</body>
+</html>

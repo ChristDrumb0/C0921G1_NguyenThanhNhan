@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<h2>Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</h2>
+<P>Phí thuê bao bắt buộc là 1.5 nghìn.</P>
+<p>600 đồng cho mỗi gọi của 5 phút đầu tiên.</p>
+<p>400 đồng cho mỗi phút gọi của 10 phút tiếp theo.</p>
+<p>200 đồng cho bất kỳ mỗi phút nào sau 15 phút.</p>
+<hr>
+Nhập tổng số phút đã gọi
+<input type="text" id="sophut" placeholder="Nhập số phút đã gọi">
+<input type="button" id="nhap" value="Submit" onclick="tinhToan()">
+<script>
+    function tinhToan() {
+        let min = document.getElementById('sophut').value;
+            if (min<=5){
+                alert('số tiền điện thoại hiện là: ' + (1500+(min*600)));
+            }else if(min <=15){
+                alert('số tiền điện thoại hiện là: ' + (4500+((min-5)*400)));
+            }else{
+                alert('số tiền điện thoại hiện là: ' + (10500+(min-15)*200));
+            }
+    }
+
+</script>
+</body>
+</html>
