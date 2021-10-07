@@ -5,6 +5,19 @@
     <title>Title</title>
 </head>
 <body>
+<h2></h2>
+<script>
+    function tinhToan() {
+        let min = document.getElementById('sophut').value;
+        if (min<=5){
+            alert('số tiền điện thoại hiện là: ' + (1500+(min*600)));
+        }else if(min <=15){
+            alert('số tiền điện thoại hiện là: ' + (4500+((min-5)*400)));
+        }else{
+            alert('số tiền điện thoại hiện là: ' + (10500+(min-15)*200));
+        }
+    }
 
+</script>
 </body>
 </html>
