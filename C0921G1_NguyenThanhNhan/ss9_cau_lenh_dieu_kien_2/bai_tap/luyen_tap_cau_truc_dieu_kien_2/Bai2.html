@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<h2>Chuyển từ mét sang feet:</h2>
+
+<input type="text" id="input" placeholder="Nhập độ dài">
+<select id="from">
+    <option value="M">Meter</option>
+    <option value="F">Feet</option>
+</select>
+<button id="submit" onclick="chuyenDoi()">Chuyển</button>
+<br>
+<br>
+<input type="text" id="ketqua">
+<script>
+    function chuyenDoi(){
+        let length = parseInt(document.getElementById('input').value);
+        let result1 = length*3.2808;
+        let result2 = length/3.2808;
+        if (document.getElementById('from').value === 'M') {
+            document.getElementById('ketqua').value = eval(result1) + ' ft';
+        } if (document.getElementById('from').value === 'F') {
+            document.getElementById('ketqua').value = eval(result2) + ' m';
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<h2>Tính diện tích hình chữ nhật khi biết 02 cạnh a, b.</h2>
+<input type="text" id="canha" placeholder="Nhập độ dài cạnh dài">
+<input type="text" id="canhb" placeholder="Nhập độ dài cạnh rộng">
+
+<input type="button" value="tính diện tích hình vuông" onclick="tinhDienTich()">
+<br>
+<br>
+<input type="text" id="ketqua">
+<script>
+    function tinhDienTich() {
+        let a = parseInt(document.getElementById('canha').value);
+        let b = parseInt(document.getElementById('canhb').value);
+        let c = a*b
+        document.getElementById('ketqua').value = c;
+    }
+</script>
+</body>
+</html>

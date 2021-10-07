@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<h2>Tính Nhiệt Độ</h2>
+
+<input type="text" id="input" placeholder="Nhập nhiệt độ ">
+<select id="from">
+    <option value="C"><sup>o</sup>C</option>
+    <option value="F"><sup>o</sup>F</option>
+</select>
+<!--<select id="to">-->
+<!--    <option value="F"><sup>o</sup>F</option>-->
+<!--    <option value="C"><sup>o</sup>C</option>-->
+<!--</select>-->
+<button id="submit" onclick="chuyenDoi()">Chuyển</button>
+<br>
+<br>
+<input type="text" id="ketqua">
+<script>
+    // let c = parseInt(prompt('Nhập độ C: '));
+    // alert ('Độ F= '+ c*9/5+32)
+    function chuyenDoi(){
+        let temp = parseInt(document.getElementById('input').value)
+        let result1 = temp*1.8+32
+        let result2 = (temp-32 ) / 1.8
+        if (document.getElementById('from').value === 'C') {
+            document.getElementById('ketqua').value = eval(result1) + ' oF'
+        } if (document.getElementById('from').value === 'F') {
+            document.getElementById('ketqua').value = eval(result2) + ' oC'
+        }
+    }
+</script>
+</body>
+</html>
