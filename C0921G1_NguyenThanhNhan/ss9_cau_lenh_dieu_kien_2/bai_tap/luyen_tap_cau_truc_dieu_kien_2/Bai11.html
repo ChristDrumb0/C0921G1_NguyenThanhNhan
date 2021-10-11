@@ -6,5 +6,32 @@
 </head>
 <body>
 <h2>Viết chương trình tính thuế thu nhập cá nhân.</h2>
+<p>Đến 05 triệu đồng (trđ) - 5%</p>
+<p>Trên 05 trđ đến 10 trđ-10% TNTT - 0,25 trđ</p>
+<p>Trên 10 trđ đến 18 trđ-15% TNTT - 0,75 trđ</p>
+<p>Trên 18 trđ đến 32 trđ-20% TNTT - 1,65 trđ</p>
+<p>-Trên 32 trđ đến 52 trđ- 25% TNTT - 3,25 trđ</p>
+<p>Trên 52 trđ đến 80 trđ-30 % TNTT - 5,85 trđ</p>
+<p>Trên 80 trđ-35% TNTT - 9,85 trđ</p>
+<script>
+
+    let n = parseInt(prompt('Nhập số tiền thu nhập hằng tháng(vd: 40 =40,000,000 VND)'))
+    if (n<=5){
+        alert('Số tiền thuế phải đóng là: '+n*0.05+' VND')
+    }else if(n<=10){
+        alert('Số tiền thuế phải đóng là: '+((n*0.1)-0.25)+' VND')
+    }else if(n<=18){
+        alert('Số tiền thuế phải đóng là: '+(n*0.15-0.75)+' VND')
+    }else if(n<=32){
+        alert('Số tiền thuế phải đóng là: '+(n*0.2-1.65)+' VND')
+    }else if(n<=52){
+        alert('Số tiền thuế phải đóng là: '+(n*0.25-3.25)+' VND')
+    }else if(n<=80){
+        alert('Số tiền thuế phải đóng là: '+(n*0.30-5.85)+' VND')
+    }else if(n>80){
+        alert('Số tiền thuế phải đóng là: '+(n*0.35-9.85)+' VND')
+    }
+
+</script>
 </body>
 </html>
