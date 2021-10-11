@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình Chữ Nhật rỗng giữa</title>
+</head>
+<body>
+<script>
+    let n = parseInt(prompt('Nhập chiều rộng:'))
+    let m = parseInt(prompt('Nhập chiều dài:'))
+    for (l=1;l<=n;l++){
+
+        for (k=1;k<=m;k++){
+
+            // if(k==1 || l==1 || k==(m-1)|| l=(n-1)){
+
+            if (k==m||l==n||l==1||k==1){
+                document.write('*');
+            }else {
+                document.write('&nbsp&nbsp')
+            }
+
+        }
+        document.write('<br>');
+    }
+
+
+</script>
+</body>
+</html>

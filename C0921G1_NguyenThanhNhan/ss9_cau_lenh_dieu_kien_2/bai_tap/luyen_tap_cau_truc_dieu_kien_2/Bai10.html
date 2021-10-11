@@ -5,18 +5,23 @@
     <title>Title</title>
 </head>
 <body>
-<h2></h2>
+<h2>Viết chương trình tính giá điện.</h2>
+<p>Định mức sử dụng điện cho mỗi hộ là: 50 KW với giá 230đ/KW</p>
+<p>Nếu phần vượt định mức <= 50KW thì tính giá 480đ/KW</p>
+<p>Nếu 50KW < phần vượt định mức < 100KW thì tính giá 700đ/KW</p>
+<p>Nếu phần vượt định mức <= 100KW thì tính giá 900đ/KW</p>
+
 <script>
-    function tinhToan() {
-        let min = document.getElementById('sophut').value;
-        if (min<=5){
-            alert('số tiền điện thoại hiện là: ' + (1500+(min*600)));
-        }else if(min <=15){
-            alert('số tiền điện thoại hiện là: ' + (4500+((min-5)*400)));
-        }else{
-            alert('số tiền điện thoại hiện là: ' + (10500+(min-15)*200));
+         let kw = prompt('Nhập số điện: ');
+        if (kw<=50){
+            alert('số tiền điện hiện là: ' +(kw*230));
+        }else if(kw <=100){
+            alert('số tiền điện thoại hiện là: ' + (11500+((kw-50)*480)));
+        }else if(kw < 150){
+            alert('số tiền điện thoại hiện là: ' + (11500+(kw-100)*700));
+        }else if(kw >=150){
+            alert('số tiền điện thoại hiện là: ' + (11500+(kw-150)*900));
         }
-    }
 
 </script>
 </body>

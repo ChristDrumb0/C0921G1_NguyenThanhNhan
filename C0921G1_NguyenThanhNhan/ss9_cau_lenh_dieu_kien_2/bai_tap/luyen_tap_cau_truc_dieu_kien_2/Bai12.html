@@ -6,5 +6,39 @@
 </head>
 <body>
 <h2>Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lãi con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</h2>
+<!--<p>P (1 + R/n)^(nt) - P</p>-->
+<!--<p>P là số tiền gốc.</p>-->
+<!--<p>R là lãi xuất hàng năm.</p>-->
+<!--<p>t là thời gian tiền được đầu tư hoặc vay.</p>-->
+<!--<p>n là số lần lãi được gộp trên mỗi đơn vị t, nếu lãi được gộp hàng tháng và t tính bằng năm thì n bằng 12. Nếu lãi được gộp hành quý và t tính bằng năm thì n bằng 4.</p>-->
+<!--<script>-->
+<!--    let P = prompt('Nhập số tiền gốc: ');-->
+<!--    let R = prompt('Nhập lãi suất: ');-->
+<!--    let t = prompt('Nhập số tháng vay: ');-->
+<!--    let n = 12-->
+<!--    let amount=P * Math.pow(1+R/n,n*t)- P;-->
+<!--        alert(amount)-->
+
+
+<!--</script>-->
+<h2>Viết chương trình tính lãi ngân hàng (lãi mẹ đẻ lại con) khi biết số tiền ban đầu, số tháng cho vay và lãi xuất hàng tháng.</h2>
+<p>tien lai = tien vay x lai suat</p>
+<p>tong tien can tra = tong tien lai + tien vay </p>
+
+
+<script>
+
+    let tv = parseInt(prompt('Nhập tiền vay:'));
+    let laiSuat = parseInt(prompt('Nhập tiền lãi suất(vd:8)'));
+    let ls = laiSuat/100
+    let t = parseInt(prompt('Nhập số tháng vay:'))
+    for (a=0;a<=t;a++){
+        document.write('Lãi suất tháng '+a+' là: '+  tv);
+        tv=tv*ls+tv
+        document.write('<br>')
+    }
+
+
+</script>
 </body>
 </html>

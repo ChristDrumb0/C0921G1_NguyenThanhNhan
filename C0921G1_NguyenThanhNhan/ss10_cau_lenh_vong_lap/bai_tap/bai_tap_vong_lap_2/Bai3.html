@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tam Giác = *</title>
+</head>
+<body>
+<script>
+let n =parseInt(prompt('Nhập chiều dài:'));
+// // Hinh1
+for (i=1;i<=n;i++){
+
+    for (j=1;j<=i;j++){
+        document.write('*');
+    }
+    document.write('<br>');
+}
+document.write('<br>');
+//Hinh2
+for (i=1;i<=n;i++){
+
+    for (j=n;j>=i;j--){
+        document.write('*');
+
+    }
+    document.write('<br>');
+}
+document.write('<br>');
+//Hinh 3
+for (i=1;i<=n;i++){
+    for (h=n;h>=i;h--){
+        document.write('&nbsp&nbsp')
+    }
+    for (j=1;j<=i;j++){
+        document.write('*');
+    }
+    document.write('<br>');
+}
+document.write('<br>');
+//Hinh4
+for (i=1;i<=n;i++){
+    for (h=1;h<=i;h++){
+        document.write('&nbsp&nbsp')
+    }
+    for (j=n;j>=i;j--){
+        document.write('*');
+    }
+    document.write('<br>');
+}
+</script>
+
+</body>
+</html>
