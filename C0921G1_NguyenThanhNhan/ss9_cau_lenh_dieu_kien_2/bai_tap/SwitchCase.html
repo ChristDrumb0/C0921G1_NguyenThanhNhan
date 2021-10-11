@@ -12,9 +12,9 @@
 
 <script>
     function tinhSoNgay() {
-        let M = document.getElementById('sothang').value;
-        // alert (M)
-        switch (M) {
+        let m = document.getElementById('sothang').value;
+        // alert (m)
+        switch (m) {
             case '1' :
             case '3':
             case '5':
@@ -22,16 +22,16 @@
             case '8':
             case '10':
             case '12':
-                // alert (M)
-                document.getElementById('ketqua').innerText = ('Có 31 ngày trong tháng ' + (M));
+                // alert (m)
+                document.getElementById('ketqua').innerText = ('Có 31 ngày trong tháng ' + (m));
                 break;
             case '2':
-                document.getElementById('ketqua').innerText = ('Có 28 hoặc 29 ngày trong tháng ' + (M));break;
+                document.getElementById('ketqua').innerText = ('Có 28 hoặc 29 ngày trong tháng ' + (m));break;
             case '4':
             case '6':
             case '9':
             case '11':
-                document.getElementById('ketqua').innerText = ('Có 30 ngày trong tháng ' + (M));break;
+                document.getElementById('ketqua').innerText = ('Có 30 ngày trong tháng ' + (m));break;
             default:
                 document.getElementById('ketqua').innerText = ('nhập số từ 1 đến 12');
         }

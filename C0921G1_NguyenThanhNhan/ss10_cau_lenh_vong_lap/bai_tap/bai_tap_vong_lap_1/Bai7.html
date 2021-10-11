@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<script>
+
+    for (let i = 1; i <= 100; i++) {
+        // kiểm tra xem có là bội số của cả 3 và 5
+        if (i % 3 === 0 && i % 5 === 0) {
+            document.write ("fizzbuzz");
+            document.write ("<br>");
+        } // có phải là bội số của 3
+        else if (i % 3 === 0) {
+            document.write("fizz");
+            document.write ("<br>");
+        } // có phải là bội số của 5
+        else if (i % 5 === 0) {
+            document.write("buzz");
+            document.write ("<br>");
+        } else {
+            document.write(i);
+            document.write ("<br>");
+        }
+    }
+</script>
+</body>
+</html>
