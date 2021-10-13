@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<h2>
+    Viết chương trình đếm số nguyên tố âm trong một chuỗi
+</h2>
+<script>
+    let arr = [-1, 2, 5, -2, -3, -5, 7, -9];
+    let min = arr[0];
+    let count = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+            if (arr[i] <= -2) {
+                let flag = true
+                for (let a = -2; a > arr[i]; a--) {
+                    if (arr[i] % a === 0) {
+                        flag = false
+                        break
+                    }
+                    if (flag) {
+                        count++
+                    }
+                }
+            }
+        }
+    }
+    document.write(count);
+
+
+</script>
+</body>
+</html>

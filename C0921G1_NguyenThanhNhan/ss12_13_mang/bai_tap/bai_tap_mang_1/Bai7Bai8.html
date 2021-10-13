@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<pre style="font-family: Arial,serif">
+Viết chương trình khởi tạo/nhập vào một mảng số nguyên gồm 10 phần tử, nhập/tạo phần tử số nguyên V.
+Chương trình kiểm tra xem V có thuộc mảng đã cho không, nếu V thuộc mảng đã cho xoá V khỏi mảng
+(Bản chất việc xoá ở đây tức là dịch phần tử ở bên phải V sang vị trí của V, và gán 0 cho phần tử cuối cùng của mảng)
+</pre>
+<script>
+    let array = [];
+    // debugger
+    for (let a = 0; a < 10; a++) {
+        do {
+            let n = prompt('Array length=10; Input integer only, no' + (a + 1) + ': ');
+            if (n == parseInt(n)) {
+                array.push(parseInt(n));
+                break;
+            }
+        }
+        while (true);
+    }
+    document.write('Tập số nguyên là: ' + array);
+    document.write('<br>');
+    debugger
+    let v = parseInt(prompt('Nhập số nguyên cần kiểm tra: '));
+    let take = 0
+    for (let i = 0; i < array.length; i++) {
+
+        if (v === array[i]) {
+            take = 1
+            console.log (array)
+            continue
+        }
+        if (take==1){
+            array[i-1]=array[i]
+
+        }
+    }if(take===0){
+        document.write(v + 'không nằm trong chuỗi')
+    }else if(take===1){
+        array.pop()
+        array.push(0)
+        document.write('Tập số nguyên hiện là: ' + array);
+    }
+//Bài 8
+    document.write('<br>');
+    array.sort(function(a,b){
+        return a-b;
+    });
+    document.write('Tập số nguyên được săp xếp là: ' + array);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Bài 2
+    let arr=[];
+    let num= 10;
+    let b = 1;
+    let count =0;
+
+    while (count<num){
+        if (b>=2){
+            let flag =true;
+            // kiểm tra SNt
+            for (let i=2;i<b;i++){
+                if (b%i==0) {
+                    flag = false;
+                    break;
+                }
+            }
+            if (flag){
+                count ++;
+                arr.push (b)
+
+            }
+        }b++;
+
+    }
+
+    document.write('Mảng là: '+ arr);
+    document.write('<br>');
+    // debugger
+    let max =arr[0]
+    let index = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+            index = i;
+        }
+    }
+    document.write("Số lớn nhất là: " + max + " Tại vị trí " + (index+1));
+    document.write('<br>');
+    //Bài 3
+    let sum= 0;
+    let average;
+    for (i=0;i<arr.length;i++){
+        sum += arr[i];
+    }
+    document.write('Trung bình của mảng là: '+(average=sum/arr.length));
+    //Bài 4
+    document.write('<br>');
+    document.write('Vị trí đảo ngược trong mảng là: '+arr.reverse())
+
+
+</script>
+</body>
+</html>

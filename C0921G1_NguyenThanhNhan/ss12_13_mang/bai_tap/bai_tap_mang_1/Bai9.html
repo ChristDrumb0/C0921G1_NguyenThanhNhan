@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+</head>
+<body>
+<pre style="font-family: Arial,serif">
+Viết chương trình khởi tạo/nhập vào 2 mảng số nguyên gồm 10 phần tử, gọi là mảng a và b.
+Mảng c là một mảng được khai báo gồm 20 phần tử số nguyên.
+Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c. Hiển thị mảng c.
+</pre>
+<script>
+    let array1=[];
+    let array2=[];
+
+
+    for (let a = 0; a < 10; a++) {
+        do {
+            let n = prompt('Array length=10; Input integer only, array 1 no' + (a + 1) + ': ');
+            if (n == parseInt(n)) {
+                array1.push(parseInt(n));
+                break;
+            }
+        }
+        while (true);
+    }
+
+    for (let b = 0; b < 10; b++) {
+        do {
+            let m = prompt('Array length=10; Input integer only,array 2 no' + (b + 1) + ': ');
+            if (m == parseInt(m)) {
+                array2.push(parseInt(m));
+                break;
+            }
+        }
+        while (true);
+    }
+    let arrayc= array1.concat(array2);
+    document.write(arrayc);
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<p>Viết một chương trình để đếm số từ trong một chuỗi</p>
+<script>
+    let x = ['25a', 30,'dsa',2.2];
+    let n = x.length;
+    let flag = false;
+    do {
+        n = prompt('Nhập độ dài mảng: ');
+        if (n == parseInt(n)) {
+            flag = true
+        }
+
+    } while (flag==false);
+    //nhập giá trị vào mảng
+    for (i = 0; i < n; i++) {
+        x.push(prompt('nhập vào giá trị ' + (i + 1) + ':'));
+    }
+    document.write('Các giá trị trong mảng: ' + x);
+    document.write(' và độ dài cuảng mảng là '+x.length);
+    document.write('<br>');
+
+    let count=0
+    for(let i=0;i<y.length;i++){
+        if(parseInt(y[i])%2 === 0 || parseInt(y[i])%2 === 1) {
+            document.write('')
+        }else{
+            count++;
+        }
+    }
+    document.write ('Có '+count+' từ trong mảng');
+
+
+</script>
+</body>
+</html>
