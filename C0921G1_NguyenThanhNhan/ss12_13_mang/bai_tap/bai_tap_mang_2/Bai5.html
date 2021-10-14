@@ -6,12 +6,87 @@
 </head>
 <body>
 <pre>
-    Viết một chương trình nhập vào 2 chuỗi,
+    Viết một chương trình nhập vào 2 mảng,
 sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
 </pre>
 <script>
+    let array1 = [];
+    let array2 = [];
+    let n = ''
+    let m = ''
+    let flag = true
+
+    // debugger
+    function kiemTra(so) {
+        if (so == parseInt(so)) {
+            flag = false;
+            document.write('Độ dài mảng: ' + so);
+            document.write('<br>');
+        }
+    }
+
+    do {
+        n = prompt('Nhập độ dài mảng 1: ');
+        kiemTra(n);
+
+    } while (flag==true){
+        flag= true;
+    }
+
+    do {
+        m = prompt('Nhập độ dài mảng 2: ');
+        kiemTra(m);
+    } while (flag==true);
+
+    // debugger
+    for (i = 0; i < n; i++) {
+        array1.push(prompt('nhập vào giá trị ' + (i + 1) + ':'));
+
+    }
+    for (i = 0; i < m; i++) {
+        array2.push(prompt('nhập vào giá trị ' + (i + 1) + ':'));
+    }
+    // debugger
+    let count=0
+    if(array1.length===array2.length){
+        for (let i = 0; i < array1.length; i++){
+            if (array2[i] === array1[i]) {
+                count++;
+            } else {
+                document.write('2 mảng khác nhau');
+                break;
+            }
+
+        }
+    }else{
+        document.write('2 mảng khác nhau' );
+    }
+    if (count===array1.length) {
+        document.write('2 mảng giống nhau');
+    }
 
 
+
+
+    // debugger
+    //
+    // if (array1.length === array2.length){
+    //     for (let i = 0; i < array1.length; i++) {
+    //         for (let j = 0; j < array2.length; j++) {
+    //             if (array1[i] === array2[j]) {
+    //                 count++;
+    //                 break;
+    //             }
+    //         }
+    //     }
+    // } else {
+    //     document.write('Hai chuỗi này không giống nhau');
+    // }
+    // if (count === array1.length && count === array2.length){
+    //     document.write('Hai chuỗi này giống nhau');
+    // } else {
+    //     document.write('Hai chuỗi này không giống nhau');
+    // }
 
 </script>
 </body>

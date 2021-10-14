@@ -5,18 +5,55 @@
     <title>Bài 8</title>
 </head>
 <body>
+<!--Thiết kế giao diện: Giao diện chỉ gồm 1 Button "Chơi" -->
 
+<pre style="font-family: Arial,serif">
+        Đọc kỹ hướng dẫn sử dụng trước khi dùng:
+Ứng dụng hiển thị cửa sổ prompt cho phép người dùng nhập vào muốn đoán trong khoảng nào
+NgườI dùng chọn ra khoảng ngẫu nhiên
+Ứng dụng chọn ra số ngẫu nhiên trong khoảng mà ngườI dùng chọn.
+Ứng dụng hiển thị cửa số prompt cho người dùng nhập giá trị mà người dùng đoán.
+Ứng dụng lấy kết quả và so sánh với giá trị ngẫu nhiên.
+Nếu bằng thì hiển thị thông báo chúc mừng và kết thúc lượt chơi.
+Nếu lớn hơn hoặc bé thua thì hiển thị thông báo lớn hơn hay bé thua và cho phép người dùng lựa chọn lại.
+</pre>
+<h2>Bấm f5 để chơi lại từ đầu</h2>
+<input type="button" id="nut" value="Chơi" onclick="bamVao()">
 <script>
     debugger
-    let m= Math.floor (Math.random() * 5);
-    while (m>=0){
-        let n = parseInt(prompt('nhập một số từ 0 đến 5'));
-        if (n ===m) {
-            alert('Bạn đã đúng');
-            break
-        }
+    //tạo số ngẫu nhiên
+    let so = ''
+    let flag = true;
 
+    do{
+        let min= prompt('Nhập vào giá trị đầu:');
+        let max= prompt('Nhập vào giá trị cuối:');
+        // so = Math.floor(Math.random() * (max - min + 1)) + min;
+        // alert (so)
+        if(min>0&&max>min&&max==parseInt(max)&&min==parseInt(min)){
+            flag=false;
+            so = Math.floor(Math.random() * (parseInt(max) -parseInt( min) + 1)) + parseInt(min);
+        }
+    }while(flag);
+
+
+    // Button "Chơi": cho phép người dùng bắt đầu chơi hoặc chơi lại
+    function bamVao(){
+        let check=true;
+        do{
+            let n = parseInt(prompt('nhập số bạn dự đoán'));
+            if (n === so) {
+                check=false;
+                alert('Bạn đã đúng, số máy chọn là: '+so);
+            }
+        }
+        while (check)
     }
+
+
+
+
+
 
 
 </script>

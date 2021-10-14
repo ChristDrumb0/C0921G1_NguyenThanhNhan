@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 6</title>
+</head>
+<body>
+<pre>
+Viết chương trình nhập vào một mảng ký tự,
+tìm tất cả các ký tự trong mảng là (-) và thay thế các ký tự này bởi ký tự ( _ )
+</pre>
+<script>
+    let array = ['-',',','-'];
+    let n = ''
+    let flag = true
+    //function kiểm tra độ dài mảng
+    function kiemTra(so) {
+        if (so == parseInt(so)) {
+            flag = false;
+            document.write('Độ dài mảng: ' + so);
+            document.write('<br>');
+        }
+    }
+    //Nhập độ dài mảng
+    do {
+        n = prompt('Nhập độ dài mảng 1: ');
+        kiemTra(n);
+
+    } while (flag==true)
+    //Nhập mảng
+    for (i = 0; i < n; i++) {
+        array.push(prompt('nhập vào giá trị ' + (i + 1) + ':'));
+    }
+    //Chuyển đổi ký tự trong mảng
+    newarray= array.toString();
+    newarray= newarray.replace(/-/g,'_') ;
+    document.write(newarray.split(" "));
+</script>
+</body>
+</html>

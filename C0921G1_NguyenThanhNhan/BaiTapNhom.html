@@ -6,46 +6,77 @@
 </head>
 <body>
 <script>
-    //nhập độ dài mảng
-    let x = [];
-    let n = x.length;
-    let flag=false;
-    do{
-        n=prompt('Nhập độ dài mảng: ');
-        if (n>0&&n<20){
-            flag=true
-            document.write ('Độ dài mảng: '+n);
-            document.write('<br>');
-            break;
-        }
+    // //nhập độ dài mảng
+    // let x = [];
+    // let n = x.length;
+    // let flag=false;
+    // do{
+    //     n=prompt('Nhập độ dài mảng: ');
+    //     if (n>0&&n<20){
+    //         flag=true
+    //         document.write ('Độ dài mảng: '+n);
+    //         document.write('<br>');
+    //         break;
+    //     }
+    //
+    // }while(flag);
+    // //nhập giá trị vào mảng
+    // for (i=0;i<n;i++){
+    //     x.push(prompt('nhập vào giá trị '+ (i+1) +':'));
+    // }document.write ('Các giá trị trong mảng: '+ x);
+    // document.write('<br>');
+    // document.write('số nguyên tố trong mảng là: ');
+    // // kiểm tra snt trong mảng
+    //
+    // let fla = true;
+    //
+    // for (let c = 0; c < x.length; c++) {
+    //     let value = x[c]
+    //     for (b = 2; b < value; b++) {
+    //         if (value % b === 0) {
+    //             fla = false;
+    //             break;
+    //         }
+    //     }
+    //     if (fla) {
+    //
+    //         document.write(value);
+    //     }
+    //
+    //
+    // }
 
-    }while(flag);
-    //nhập giá trị vào mảng
-    for (i=0;i<n;i++){
-        x.push(prompt('nhập vào giá trị '+ (i+1) +':'));
-    }document.write ('Các giá trị trong mảng: '+ x);
-    document.write('<br>');
-    document.write('số nguyên tố trong mảng là: ');
-    // kiểm tra snt trong mảng
+    //Bài thầy làm
+    let n;
+    let array=[];
+    do {
+        n=prompt("nhập độ dài của mảng");
+    }while (!(0<n&&n<20&&parseInt(n)==n))
 
-    let fla = true;
-
-    for (let c = 0; c < x.length; c++) {
-        let value = x[c]
-        for (b = 2; b < value; b++) {
-            if (value % b === 0) {
-                fla = false;
-                break;
-            }
-        }
-        if (fla) {
-
-            document.write(value);
-        }
-
-
+    alert("độ dài của mảng: "+ n)
+    for (let i=0;i<n;i++){
+        array.push(prompt("nhập vào phần tử thứ "+i));
     }
 
+    for (let i=0;i<n;i++){
+        if (ktSNT(array[i])){
+            document.write(array[i]+",");
+        }
+    }
+
+    function ktSNT(so) {
+        if (so >= 2) {
+            // kiểm tra SNt
+            for (let i = 2; i < so; i++) {
+                if (so % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
 
 
 </script>

@@ -33,21 +33,27 @@
 <!--    document.getElementById("ketQua").innerHTML = stringTable;-->
 <!--</script>-->
 <script>
-    let size = parseInt(prompt("Nhập vào số lượng phần tử của mảng"));
-    let array = new Array(size);
-    alert(array.length);
-    for (let i = 0; i < array.length; i++) {
-        if (array.length<=size){
-            array.push(prompt("Nhập phần tử thứ" + i));
-        }else if (array.length>size){
-            break
-        }
+    // let size = parseInt(prompt("Nhập vào số lượng phần tử của mảng"));
+    // let array = new Array(size);
+    // alert(array.length);
+    // for (let i = 0; i < array.length; i++) {
+    //     if (array.length<=size){
+    //         array.push(prompt("Nhập phần tử thứ" + i));
+    //     }else if (array.length>size){
+    //         break
+    //     }
+    //
+    // }
+    // array.reverse();
+    // let result = array.join("");
+    // document.write(result);
 
-
+    function add(a, b) {
+        return a + b;
     }
-    array.reverse();
-    let result = array.join("");
-    document.write(result);
+
+    let sum = add("4", "3");
+    alert (sum)
  </script>
 </body>
 </html>
