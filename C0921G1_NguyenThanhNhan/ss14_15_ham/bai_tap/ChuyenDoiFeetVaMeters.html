@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+<p>meter = 0.305 * foot</p>
+<p>foot = 3.279 * meter</p>
+<input type="text" id="input">
+<select id="from">
+    <option value="m">Metter</option>
+    <option value="ft">Feet</option>
+</select>
+<button onclick="doConvert()">Chuyển đổi</button>
+<br>
+<input type="text" id="result">
+<script>
+
+    // debugger
+    let flag = true;
+    function doConvert() {
+        let length = document.getElementById('input').value;
+        // alert (isFinite(length));
+        if (isFinite(length)) {
+            flag = false;
+        } else {
+            alert('Vui lòng nhập lại số');
+        }
+        if (flag == false) {
+            convertLength(length);
+        }
+    }
+
+    function convertLength(number){
+
+        if (document.getElementById('from').value === 'ft'){
+            document.getElementById('result').value = 0.305 * parseFloat(number) +'m' ;
+        }
+        else if (document.getElementById('from').value === 'm'){
+            document.getElementById('result').value = 3.279 * parseFloat(number) +' ft'
+        }
+
+    }
+
+</script>
+</body>
+</html>

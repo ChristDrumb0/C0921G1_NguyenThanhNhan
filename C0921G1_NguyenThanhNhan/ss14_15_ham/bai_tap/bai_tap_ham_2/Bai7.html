@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 7</title>
+</head>
+<body>
+<p>Viết hàm truyền vào 2 số nguyên bất kì, thực hiện đổi chỗ hai số nguyên đó.</p>
+<script>
+    let arr=[];
+    flag = true
+    nhapSoNguyen(arr)
+    document.write(arr.reverse());
+    function nhapSoNguyen(array){
+        for (i=0;i<2;i++){
+            do {
+                let n=prompt('Nhập số thứ ' +(i+1))
+                if(n==parseInt(n)){
+                    flag = false
+                    array.push(n)
+                }
+            }while(flag)
+            flag = true
+        }
+
+    }
+
+
+
+
+</script>
+</body>
+</html>

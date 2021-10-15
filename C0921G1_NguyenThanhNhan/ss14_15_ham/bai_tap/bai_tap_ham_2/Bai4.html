@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<p>Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số không. Nếu là ký tự số hàm trả về true, ngược lại trả về false.</p>
+<script>
+    function kTraSo(x) {
+        if(isFinite(x)) {
+            alert('Bạn đã nhập số')
+        }else{
+            alert ('Bạn đã không nhập số')
+        }
+    }
+    let num=prompt('hãy nhập')
+    kTraSo(num)
+
+</script>
+</body>
+</html>

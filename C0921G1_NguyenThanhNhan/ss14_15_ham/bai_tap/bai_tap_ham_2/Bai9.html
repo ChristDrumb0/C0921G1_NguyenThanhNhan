@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 9</title>
+
+</head>
+<body>
+<pre>
+    Viết hàm truyền vào một mảng ký tự, và một ký tự bất kỳ,
+    kiểm tra xem ký tự bất kỳ đó có nằm trong mảng không.
+    Nếu có trả về số lần xuất hiện của ký tự đó, nếu không trả về -1.
+</pre>
+<script>
+    let arr=[];
+    let flag = true;
+    let length='';
+
+
+    //function
+    function nhapMang(array) {
+        nhapDoDaiMang();
+        for (let i = 0; i < length; i++) {
+            let n = prompt('Nhập giá trị thứ ' + (i + 1));
+            array.push(n);
+        }
+    }
+    function nhapDoDaiMang() {
+        do {
+            let l = prompt('nhập độ dài mảng cần kiểm tra');
+            if (l == parseInt(l)) {
+                length=l;
+                flag = false;
+            }
+        } while (flag);
+    }
+    function kiemTraKyTu(array,symbol){
+        let count=0;
+        for(let ai=0;ai<length;ai++){
+            if (symbol==array[ai]){
+                count++;
+            }
+        }
+        if (count!==0){
+            document.write('có '+count+' ký tự '+'"'+symbol+'"'+' trong mảng');
+
+        }else{
+            document.write(-1);
+        }
+    }
+
+
+    //execute
+    let kytu=prompt('Nhập ký tự cần kiểm tra');
+    nhapMang(arr);
+    kiemTraKyTu(arr,kytu);
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
