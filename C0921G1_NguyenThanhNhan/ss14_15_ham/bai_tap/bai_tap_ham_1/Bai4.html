@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 4</title>
+</head>
+<body>
+<pre>
+    Thêm các hàm alert() vào những vị trí thích hợp trong đoạn mã sau
+    để bạn có thể nhìn thấy giá trị của biến result trước và sau lời gọi hàm.
+    Đoạn mã có dạng như sau:
+    function addNumbers() {
+    firstNum = 4;
+    secondNum = 8;
+    result = firstNum + secondNum;
+    return result;
+    }
+    result = 0;
+    result = addNumbers();
+</pre>
+<script>
+    function addNumbers() {
+        firstNum = 4;
+        secondNum = 8;
+        // alert (firstNum)
+        // alert (secondNum)
+        resut = firstNum + secondNum;
+        return resut;
+
+    }
+    result = 0;
+    alert ('Giá trị biến resut trước khi tính là '+result)
+    result = addNumbers();
+    alert ('Giá trị biến resut sau khi gọi hàm là '+result)
+</script>
+</body>
+</html>

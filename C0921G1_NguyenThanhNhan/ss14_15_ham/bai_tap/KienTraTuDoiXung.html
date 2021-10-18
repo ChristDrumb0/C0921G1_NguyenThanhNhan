@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<p>
+    Xây dựng chương trình sử dụng đệ quy để kiểm tra một từ có phải là từ đối xứng không.
+</p>
+<pre></pre>
+<script>
+    debugger
+    function isPalindrome(str) {
+        let len = str.length
+        for (let i = 0; i < (len/2); i++) {
+            if (str[len - 1-i] !== str[i]) {
+                return (str + ' không phải là từ đối xứng');
+            }
+        }
+        return (str + ' là từ đối xứng');
+
+    }
+
+    let string = prompt('Nhập vào từ muốn kiểm tra');
+    let result = isPalindrome(string);
+    document.write(result);
+
+    function isPalindrome(str,len){
+        if (str[len - 1-i] !== str[i]) {
+            return (str + ' không phải là từ đối xứng');
+        }else{
+            
+        }
+    }
+
+</script>
+</body>
+</html>

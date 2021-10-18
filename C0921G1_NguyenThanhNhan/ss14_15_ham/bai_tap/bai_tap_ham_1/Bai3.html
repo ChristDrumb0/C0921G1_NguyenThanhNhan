@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<pre style="font-family: Arial,serif">
+    Tạo hàm nhận vào hai tham số.
+    Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng.
+    Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.
+</pre>
+<input type="text" id="so1" placeholder="Nhập số 1">
+<input type="text" id="so2" placeholder="Nhập số 2">
+<input type="button" onclick="alertMessage()" value="Kiểm tra">
+<script>
+    function alertMessage() {
+        let a = parseFloat(document.getElementById('so1').value);
+        let b = parseFloat(document.getElementById('so2').value);
+        alert (a)
+        alert (b)
+        // return ('num1+num2')
+        if (a<=b){
+            alert('Tổng 2 số là: '+ (a+b));
+        }else{
+            alert('số thứ nhất lớn hơn số thứ 2');
+        }
+    }
+    // let num1 =parseFloat(document.getElementById('so1').value);
+    // let num2 = parseFloat(document.getElementById('so2').value);
+
+    alertMessage();
+
+
+</script>
+</body>
+</html>
