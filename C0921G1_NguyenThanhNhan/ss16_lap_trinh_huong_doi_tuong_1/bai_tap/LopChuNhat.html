@@ -41,30 +41,32 @@
         return "rgb(" + red + "," + blue + "," + green + ")";
     }
 
-
-    function createperimeter() {
+    function createRectangle() {
         let ctx = document.getElementById("myCanvas").getContext("2d");
-        let radius = Math.floor(Math.random() * 80);
         let color = this.getRandomColor();
+        let length = Math.floor(Math.random() * 20);
+        let width = Math.floor(Math.random() * 20);
         let spx = Math.random() * window.innerWidth;
         let spy = Math.random() * window.innerHeight;
-
-        let circle = new Circle(x, y,spx,spy);
-        ctx.beginPath();
-        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        let rectangle = new myRectangle(length,width,spx,spy);
         ctx.fillStyle = color;
-        ctx.fill();
+        ctx.fillRect(rectangle.len,rectangle.wid,rectangle.spaceX,rectangle.spaceY);
     }
 
-    let rectangle = new myRectangle(5, 6);
-    let length = rectangle.getlen();
-    let width = rectangle.getwid();
-    let area = rectangle.getarea();
-    let perimeter=rectangle.getperi();
-    alert(perimeter)
-    alert(area)
+    // let rectangle = new myRectangle(5,6,0,0);
+    // let length = rectangle.getlen();
+    // let width = rectangle.getwid();
+    // let area = rectangle.getarea();
+    // let perimeter=rectangle.getperi();
+    // alert(perimeter)
+    // alert(area)
 
+    createRectangle()
 
+    // let ctx = document.getElementById("myCanvas").getContext("2d");
+    // let color = this.getRandomColor();
+    // ctx.fillStyle = color;
+    // ctx.fillRect(10, 40,360,160);
 
 </script>
 </body>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lớp Temperature</title>
+</head>
+<body>
+<script>
+    class myTemp{
+
+        constructor(c) {
+            this.Cel=c;
+        }
+        getCel(){
+            return this.Cel;
+        }
+        getFar(){
+            return this.Cel*1.8+32;
+        }
+        getKel(){
+            return this.Cel+273.15;
+        }
+
+    }
+    let flag= true;
+    do {
+        var temp = parseFloat(prompt('Nhập nhiệt độ cần quy đổi'));
+        if (temp>-273){
+            flag = false;
+        }
+
+    }while(flag);
+
+    let c=new myTemp(temp);
+    let f= c.getFar();
+    let k= c.getKel();
+    alert('Quy đổi ra nhiệt độ F là: '+f);
+    alert('Quy đổi ra nhiệt độ Kelvin là: '+k);
+
+</script>
+</body>
+</html>
