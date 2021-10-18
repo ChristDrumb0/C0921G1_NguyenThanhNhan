@@ -9,32 +9,37 @@
 <script>
 
     let arr=[];
-    let flag = true
+    let flag = true;
 
     do {
         var l = prompt('nhập độ dài mảng')
         if (l == parseInt(l)) {
-            flag = false
+            flag = false;
             // length = l
         }
-    } while (flag)
-    nhapSoNguyen(arr)
-    document.write(arr.reverse());
-
+    } while (flag);
+    document.write('mảng ban đầu nhập vào là: '+nhapSoNguyen(arr));
+    document.write('<br>');
+    document.write('mảng đảo ngược lại là là: '+ doReverse(arr));
     function nhapSoNguyen(array){
         flag = true
         for (let i=0;i<l;i++){
             do {
                 let n=prompt('Nhập số thứ ' +(i+1))
                 if(n==parseInt(n)){
-                    flag = false
-                    array.push(n)
+                    flag = false;
+                    array.push(n);
                 }
-            }while(flag)
-            flag = true
+            }while(flag);
+            flag = true;
         }
-
+        return array;
     }
+    function doReverse(array){
+        array.reverse()
+        return array;
+    }
+
 
 </script>
 </body>

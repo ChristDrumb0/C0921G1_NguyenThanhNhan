@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Hình Chữ Nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="1368px" height="768px" style="border:1px solid #d3d3d3;">
+</canvas>
+
+<script>
+
+    class myRectangle {
+        constructor(x,y,spx,spy) {
+            this.spaceX=spx;
+            this.spaceY=spy;
+            this.len = x;
+            this.wid = y;
+        }
+        getlen(){
+            return this.len;
+        }
+        getwid(){
+            return this.wid;
+        }
+        getarea(){
+            return this.len*this.wid
+        }
+        getperi(){
+            return (this.len+this.wid)*2
+        }
+
+    }
+    function getRandomHex() {
+        return Math.floor(Math.random() * 255);
+    }
+    function getRandomColor() {
+        let red = this.getRandomHex();
+        let green = this.getRandomHex();
+        let blue = this.getRandomHex();
+        return "rgb(" + red + "," + blue + "," + green + ")";
+    }
+
+
+    function createperimeter() {
+        let ctx = document.getElementById("myCanvas").getContext("2d");
+        let radius = Math.floor(Math.random() * 80);
+        let color = this.getRandomColor();
+        let spx = Math.random() * window.innerWidth;
+        let spy = Math.random() * window.innerHeight;
+
+        let circle = new Circle(x, y,spx,spy);
+        ctx.beginPath();
+        ctx.arc(circle.x, circle.y, circle.radius, 0, 2 * Math.PI);
+        ctx.fillStyle = color;
+        ctx.fill();
+    }
+
+    let rectangle = new myRectangle(5, 6);
+    let length = rectangle.getlen();
+    let width = rectangle.getwid();
+    let area = rectangle.getarea();
+    let perimeter=rectangle.getperi();
+    alert(perimeter)
+    alert(area)
+
+
+
+</script>
+</body>
+</html>
