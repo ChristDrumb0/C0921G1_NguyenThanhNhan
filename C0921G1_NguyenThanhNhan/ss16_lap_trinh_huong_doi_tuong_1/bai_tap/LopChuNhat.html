@@ -51,13 +51,16 @@
         let rectangle = new myRectangle(length,width,spx,spy);
         ctx.fillStyle = color;
         ctx.fillRect(rectangle.len,rectangle.wid,rectangle.spaceX,rectangle.spaceY);
+        let area = rectangle.getarea();
+        let perimeter=rectangle.getperi();
+        alert(perimeter)
+        alert(area)
     }
 
     // let rectangle = new myRectangle(5,6,0,0);
     // let length = rectangle.getlen();
     // let width = rectangle.getwid();
-    // let area = rectangle.getarea();
-    // let perimeter=rectangle.getperi();
+
     // alert(perimeter)
     // alert(area)
 
