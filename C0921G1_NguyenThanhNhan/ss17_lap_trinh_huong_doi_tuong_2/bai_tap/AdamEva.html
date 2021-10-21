@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adam & Eva</title>
+</head>
+<body>
+<script>
+    class Apple{
+        constructor() {
+            this.appleWeight=10;
+            this.isEmpty=false;
+        }
+
+        getWeight(){
+            return this.appleWeight;
+            document.write ('<br>');
+        }
+        getDecrease(){
+            if(this.appleWeight>0){
+
+                return this.appleWeight--;
+                document.write ('<br>');
+            }
+            else{
+                return this.isEmpty=true;
+                document.write ('<br>');
+            }
+        }
+        getEmpty(){
+            if (this.isEmpty===true){
+                console.log ('Apple Weight is '+this.appleWeight);
+                document.write ('<br>');
+            }
+        }
+
+    }
+    class Human{
+        constructor(name,gender,weight) {
+            this.name=name;
+            this.gender=gender;
+            this.Humanweight=weight;
+            this.say="";
+            // this.checkApple=true;
+        }
+        getName(){
+            return this.name;
+            document.write ('<br>');
+        }
+        getWeight(){
+            return this.Humanweight;
+            document.write ('<br>');
+        }
+        getGender(){
+            return this.gender
+        }
+        isMale(){
+            if(this.getGender()== 'male'){
+                document.write (this.name + ' is a Male');
+                document.write ('<br>');
+            }
+            else{
+                document.write (this.name+ ' is a Female');
+                document.write ('<br>');
+            }
+        }
+        getSay(text){
+            this.say=text
+            document.write(this.name+': '+ this.say);
+            document.write ('<br>');
+        }
+        checkApple(apple){
+            return apple.appleWeight;
+            document.write ('<br>');
+        }
+        eatApple(apple){
+            return apple.getDecrease();
+            document.write ('<br>');
+        }
+
+    }
+    let adam = new Human('Adam','male',50);
+    let eva = new Human('Eva','female',45);
+    let apple = new Apple();
+    let text = 'trái này ăn được'
+    let text1 = "hết đồ ăn rồi"
+    let text2 = "vào rừng mà hái"
+    let text3 = "chỉ có đàn ông mới vào rừng thôi"
+    let text4 = "ok"
+
+    document.write (adam.checkApple(apple))
+    document.write ('<br>');
+    adam.getSay(text)
+    for(let i=0;i<5;i++){
+        adam.eatApple(apple);
+        eva.eatApple(apple);
+    }
+    document.write (eva.checkApple(apple));
+    document.write ('<br>');
+    eva.getSay(text1);
+    adam.getSay(text2);
+    eva.getSay(text3);
+    eva.isMale()
+    adam.isMale()
+    adam.getSay(text4);
+
+
+
+
+
+</script>
+</body>
+</html>

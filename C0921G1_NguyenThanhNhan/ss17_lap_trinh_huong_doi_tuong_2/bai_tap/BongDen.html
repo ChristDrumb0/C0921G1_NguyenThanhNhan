@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mô Phỏng Bóng Đèn Công Tắc</title>
+</head>
+<body>
+<script>
+    class Lamp{
+        constructor (){
+            this.status = false;
+
+        }
+        getStatus (){
+            return this.status;
+
+        }
+        turnOnOff(){
+            this.status = !this.status;
+        }
+    }
+    class Switch{
+        constructor() {
+            this.status = true;
+
+        }
+        getStatus(){
+            return this.status;
+
+        }
+        switchOnOff(){
+            this.status = !this.status;
+        }
+        getConnectLamp(lamp){
+            if (this.status){
+                lamp.turnOnOff()
+            }
+            else{
+                lamp.turnOnOff()
+            }
+        }
+
+    }
+</script>
+</body>
+</html>
