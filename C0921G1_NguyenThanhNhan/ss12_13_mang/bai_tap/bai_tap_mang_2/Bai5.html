@@ -47,46 +47,46 @@ sau đó kiểm tra xem hai chuỗi có giống nhau hay không.
         array2.push(prompt('nhập vào giá trị ' + (i + 1) + ':'));
     }
     // debugger
-    let count=0
-    if(array1.length===array2.length){
-        for (let i = 0; i < array1.length; i++){
-            if (array2[i] === array1[i]) {
-                count++;
-            } else {
-                document.write('2 mảng khác nhau');
-                break;
-            }
-
-        }
-    }else{
-        document.write('2 mảng khác nhau' );
-    }
-    if (count===array1.length) {
-        document.write('2 mảng giống nhau');
-    }
-
-
-
-
-    // debugger
-    //
-    // if (array1.length === array2.length){
-    //     for (let i = 0; i < array1.length; i++) {
-    //         for (let j = 0; j < array2.length; j++) {
-    //             if (array1[i] === array2[j]) {
-    //                 count++;
-    //                 break;
-    //             }
+    // let count=0
+    // if(array1.length===array2.length){
+    //     for (let i = 0; i < array1.length; i++){
+    //         if (array2[i] === array1[i]) {
+    //             count++;
+    //         } else {
+    //             document.write('2 mảng khác nhau');
+    //             break;
     //         }
+    //
     //     }
-    // } else {
-    //     document.write('Hai chuỗi này không giống nhau');
+    // }else{
+    //     document.write('2 mảng khác nhau' );
     // }
-    // if (count === array1.length && count === array2.length){
-    //     document.write('Hai chuỗi này giống nhau');
-    // } else {
-    //     document.write('Hai chuỗi này không giống nhau');
+    // if (count===array1.length) {
+    //     document.write('2 mảng giống nhau');
     // }
+
+
+
+
+    debugger
+
+    if (array1.length === array2.length){
+        for (let i = 0; i < array1.length; i++) {
+            for (let j = 0; j < array2.length; j++) {
+                if (array1[i] === array2[j]) {
+                    count++;
+                    break;
+                }
+            }
+        }
+    } else {
+        document.write('Hai chuỗi này không giống nhau');
+    }
+    if (count === array1.length && count === array2.length){
+        document.write('Hai chuỗi này giống nhau');
+    } else {
+        document.write('Hai chuỗi này không giống nhau');
+    }
 
 </script>
 </body>
