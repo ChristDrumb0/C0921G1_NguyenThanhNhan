@@ -7,13 +7,47 @@
 <body>
 
 <script>
-    let arr=[].fill();
+debugger
+// var matrix = [[]];
+//     for (let row = 0; row < 3; row++) {
+//
+//         for (let column = 0; column < 4; column++) {
+//             matrix[row] [column]= Math.floor((Math.random() * 100) + 1);
+//         }
+//     }
+//     console.log(matrix);
 
-    for (let i=0; i<10; i++) {
-        for(let j=0;j<10;j++){
+// function commonCharacterCount(s1, s2) {
+//     var count = 0;
+//     var str = "";
+//     for (var i = 0; i < s1.length; i++) {
+//         if (s2.indexOf(s1[i]) > -1 && str.indexOf(s1[i]) == -1) {
+//             count++;
+//             str.concat(s1[i])
+//         }
+//     }
+//
+//     return count;
+// }
 
-    alert (titleCase("Hoặc sHoRt AnD sToUt"));
+console.log(commonCharacterCount("aabcc", "adcaa"));
+function commonCharacterCount(s1, s2) {
+    let count = [];
+    s1 = s1.split('');
+    s2 = s2.split('');
 
- </script>
+    s1.forEach(e => {
+        if (s2.includes(e)) {
+            count++
+            s2.splice(s2.indexOf(e), 1);
+        }
+    });
+
+    return count;
+}
+
+console.log(commonCharacterCount("aabcc", "adcaa"));
+
+</script>
 </body>
 </html>
