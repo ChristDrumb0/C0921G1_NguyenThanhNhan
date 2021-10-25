@@ -52,12 +52,12 @@
     <input type="button" onclick="yc4Bai3()" value="Bài 3"> Cho hai xâu kí tự, tìm số lượng kí tự chung giữa chúng.
     <br>
     <h3>Yêu Cầu 5-Mảng 2 chiều</h3>
-    <input type="button" onclick="yc5Bai1()" value="Bài 1">Viết hàm tính tổng các số chẵn trong ma trận có kích thước
+    <input type="button" onclick="yc5Bai1()" value="Bài 1"> Viết hàm tính tổng các số chẵn trong ma trận có kích thước.
     m*n.
     <br>
-    <input type="button" onclick="yc5Bai2()" value="Bài 2">
+    <input type="button" onclick="yc5Bai2()" value="Bài 2"> Viết hàm liệt kê và đếm các số nguyên tố trong mảng 2 chiều.
     <br>
-    <input type="button" onclick="yc5Bai3()" value="Bài 3">
+    <input type="button" onclick="yc5Bai3()" value="Bài 3"> Viết hàm tìm giá trị lớn nhất, nhỏ nhất trong mảng 2 chiều
     <br>
 </div>
 <!--footer-->
@@ -369,7 +369,7 @@
 
     //Bai 3
     function yc4Bai3() {
-        debugger
+        // debugger
         let s1 = prompt('nhập vào chuỗi 1:');
         let s2 = prompt('nhập vào chuỗi 2:');
         // s1.split('')
@@ -437,12 +437,64 @@
 
     //Bai 2
     function yc5Bai2() {
+        let array = [];
+        khoiTaoMang2Chieu(array);
+        let temp = [];
+        let flag = true;
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (array[i][j]>=2){
+                    for (let x=2;x<array[i][j];x++){
+                        if (array[i][j] % x == 0) {
+                            flag = false;
+                            break
+                        }
+                    }
+                    if(flag){
+                        temp.push(array[i][j]);
+                    }
+                }else{
+                    temp.push(array[i][j]);
+                }
 
+            }
+        }
+        alert('có '+ temp.length+' số nguyên tố trong mảng là: ' + temp);
     }
 
     //Bai 3
     function yc5Bai3() {
+        let array =[];
+        let max=0
+        let min=0
+        khoiTaoMang2Chieu(array);
+        timSoLonNhat(array,max);
+        timSoNhoNhat(array,min);
 
+    }
+    function timSoLonNhat(arr) {
+        let max=0
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if(arr[i][j]>max){
+                    max=arr[i][j];
+                }
+
+            }
+        }
+        alert ('số lớn nhất trong mảng là: '+max);
+    }
+    function timSoNhoNhat(arr) {
+        let min =''
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = 0; j < arr[i].length; j++) {
+                if(arr[i][j]<min){
+                    min=arr[i][j];
+                }
+
+            }
+        }
+        alert('số nhỏ nhất trong mảng là: '+min)
     }
 </script>
 </body>
