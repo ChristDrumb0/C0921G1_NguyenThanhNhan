@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+
+    function createArray(arr) {
+        let flag = true;
+        let length = 0;
+        let num = 0;
+        do {
+            length = prompt('nhập vào độ dài mảng (<=50)');
+            if (length <= 50 && length == parseInt(length)) {
+                flag = false;
+            }
+        } while (flag);
+
+        for (let i = 0; i < length; i++) {
+            let flag2 = true;
+            do {
+                num = prompt('nhập vào mảng số thứ ' + (i + 1));
+                if (num == parseInt(num)) {
+                    flag2 = false;
+                }
+            } while (flag2)
+            if (flag2 === false) {
+                arr.push(parseInt(num));
+            }
+
+        }
+    }
+
+    let array = [];
+    createArray(array);
+    let temp = [];
+
+    for (let j = 0; j < array.length; j++) {
+        let flag3 = true;
+        if (j % 2 === 0) {
+            if (array[j] % 2 === 1) {
+                temp.push(array[j]);
+            }
+        }
+    }
+    let sum = 0
+    for (let h = 0; h < temp.length; h++) {
+        sum += temp[h];
+    }
+    let average = sum / temp.length;
+
+    alert('Mảng số nguyên nhập vào là: ' + array);
+    alert('Độ dài mảng số nguyên là: ' + array.length);
+    alert('các số lẻ ở vị trí chẵn trong mãng là: ' + temp + ' ,có trung bình cộng là: ' + average);
+</script>
+</body>
+</html>

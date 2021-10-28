@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let so1 = prompt('nhập vào số thứ nhất');
+    let so2 = prompt('nhập vào số thứ hai');
+    let array1 = [];
+    let array2 = [];
+    if (so1 > 0 && so2 > 0 && so1 == parseInt(so1) && so2 == parseInt(so2)) {
+        alert(kiemTraSoThanThiet(parseInt(so1), parseInt(so2), array1, array2));
+    } else {
+        alert('cặp số chưa phù hợp');
+    }
+
+    function kiemTraUocSo(num, array) {
+        for (let i = 0; i < num; i++) {
+            if (num % i === 0) {
+                array.push(i);
+            }
+        }
+    }
+
+    function kiemTraSoThanThiet(num1, num2, array1, array2) {
+        kiemTraUocSo(num1, array1);
+        kiemTraUocSo(num2, array2);
+        let sum1 = 0;
+        for (let j = 0; j < array1.length; j++) {
+            sum1 += array1[j];
+        }
+        let sum2 = 0;
+        for (let h = 0; h < array2.length; h++) {
+            sum2 += array2[h];
+        }
+        if (sum1 === num2 && sum2 === num1) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+</script>
+</body>
+</html>

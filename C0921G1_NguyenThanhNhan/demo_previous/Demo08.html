@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td><input type="text" id="maso" placeholder="Nhập mã số"></td>
+        <td><input type="text" id="loai" placeholder="Nhập loại tiết kiệm"></td>
+        <td><input type="text" id="hoten" placeholder="Nhập Họ và Tên"></td>
+        <td><input type="text" id="cmnd" placeholder="Nhập chứng minh thư"></td>
+        <td><input type="text" id="ngaymo" placeholder="Nhập ngày mở sổ(dd/mm/yy)"></td>
+        <td><input type="text" id="sotien" placeholder="Nhập số tiền"></td>
+    </tr>
+</table>
+<input type="text" id="id" hidden>
+<input type="button" value="add" onclick="addSavingBook()">
+<input type="button" value="update" onclick="updateSavingBook()">
+<p id="ketQua"></p>
+<script>
+
+
+    //Bai 3
+    class SavingBook {
+        constructor(maso, loai, hoten, cmnd, ngaymo, sotien) {
+            this.regnum = maso;
+            this.type = loai;
+            this.name = hoten;
+            this.id = cmnd;
+            this.date = ngaymo;
+            this.amount = sotien;
+        }
+
+        getRegnum() {
+            return this.regnum;
+        }
+
+        getType() {
+            return this.type;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getId() {
+            return this.id;
+        }
+
+        getDate() {
+            return this.date;
+        }
+
+        getAmount() {
+            return this.amount;
+        }
+
+        setRegnum(regnum) {
+            this.regnum = regnum;
+        }
+
+        setType(type) {
+            this.type = type;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setId(id) {
+            this.id = id;
+        }
+
+        setDate(date) {
+            this.date = date;
+        }
+
+        setAmount(amount) {
+            this.amount = amount;
+        }
+
+    }
+
+    function addSavingBook() {
+        let newRegnum = document.getElementById('maso').value;
+        let newType = document.getElementById('loai').value;
+        let newName = document.getElementById('hoten').value;
+        let newId = document.getElementById('cmnd').value;
+        let newDate = document.getElementById('ngaymo').value;
+        let newAmount = document.getElementById('sotien').value;
+
+        let newBook = new SavingBook(newRegnum, newType, newName, newId, newDate, newAmount);
+        savingBook.push(newBook);
+        display(savingBook);
+        resetSavingBook()
+    }
+    function updateSavingBook() {
+        let id=document.getElementById('id').value
+        savingBook[id].setRegnum(document.getElementById('maso').value);
+        savingBook[id].setType(document.getElementById('loai').value);
+        savingBook[id].setName(document.getElementById('hoten').value);
+        savingBook[id].setId(document.getElementById('cmnd').value);
+        savingBook[id].setDate(document.getElementById('ngaymo').value);
+        savingBook[id].setAmount(document.getElementById('sotien').value);
+
+        display(savingBook);
+
+
+    }
+
+    function resetSavingBook() {
+        document.getElementById('maso').value='';
+        document.getElementById('loai').value='';
+        document.getElementById('hoten').value='';
+        document.getElementById('cmnd').value='';
+        document.getElementById('ngaymo').value='';
+        document.getElementById('sotien').value='';
+    }
+
+    function deleteSavingBook(index) {
+        savingBook.splice(index, 1);
+        display(savingBook);
+    }
+
+    function editSavingBook(index) {
+        document.getElementById('id').value = index;
+        document.getElementById('maso').value=savingBook[index].getRegnum();
+        document.getElementById('loai').value=savingBook[index].getType();
+        document.getElementById('hoten').value=savingBook[index].getName();
+        document.getElementById('cmnd').value=savingBook[index].getId();
+        document.getElementById('ngaymo').value=savingBook[index].getDate();
+        document.getElementById('sotien').value=savingBook[index].getAmount();
+
+
+
+    }
+
+    function display(arraySavingBook) {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>Mã số</th>\n' +
+            '        <th>Loại tiết kiệm</th>\n' +
+            '        <th>Họ và tên</th>\n' +
+            '        <th>Chứng minh thư</th>\n' +
+            '        <th>Ngày gửi</th>\n' +
+            '        <th>Số tiền gửi</th>\n' +
+            '    </tr>';
+
+        for (let i = 0; i < arraySavingBook.length; i++) {
+            tableString += '<tr>\n' +
+                '       <td>' + arraySavingBook[i].getRegnum() + '</td>\n' +
+                '       <td>' + arraySavingBook[i].getType() + '</td>\n' +
+                '       <td>' + arraySavingBook[i].getName() + '</td>\n' +
+                '       <td>' + arraySavingBook[i].getId() + '</td>\n' +
+                '       <td>' + arraySavingBook[i].getDate() + '</td>\n' +
+                '       <td>' + arraySavingBook[i].getAmount() + '</td>\n' +
+                '       <td><input type="button" value="Edit" onclick="editSavingBook(' + i + ')"></td>\n' +
+                '       <td><input type="button" value="Delete" onclick="deleteSavingBook(' + i + ')"></td>\n' +
+                '    </tr>';
+        }
+        tableString += '</table>';
+        document.getElementById("ketQua").innerHTML = tableString;
+    }
+
+    let savingBook = [];
+</script>
+</body>
+</html>

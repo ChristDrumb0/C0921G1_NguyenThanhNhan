@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 3</title>
+</head>
+<body>
+<input type="button" onclick="addNewBook()" value="Thêm sách mới">
+<!--<input type="button" onclick="adjustBookAmount()" value="Thêm sách đã có">-->
+<p id="ketQua"></p>
+<script>
+    let bookList = [];
+
+    class Book {
+        constructor(maso, ten, namxb, soquyen) {
+            this.regnum = maso;
+            this.name = ten;
+            this.date = namxb;
+            this.amount = soquyen;
+        }
+
+        getRegnum() {
+            return this.regnum;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        getDate() {
+            return this.date;
+        }
+
+        getAmount() {
+            return this.amount;
+        }
+
+        setRegnum(regnum) {
+            this.regnum = regnum;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        setDate(date) {
+            this.date = date;
+        }
+
+        setAmount(amount) {
+            this.amount = amount;
+        }
+
+        isAvailable() {
+            if (this.amount > 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        decrease() {
+            this.amount--;
+        }
+
+
+    }
+
+    function display(arrayBook) {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>Mã số sách</th>\n' +
+            '        <th>Tên sách</th>\n' +
+            '        <th>Năm xuất bản</th>\n' +
+            '        <th>Số quyển</th>\n' +
+            '        <th>Tình trạng</th>\n' +
+            '    </tr>';
+
+        for (let i = 0; i < arrayBook.length; i++) {
+            tableString += '<tr>\n' +
+                '       <td>' + arrayBook[i].getRegnum() + '</td>\n' +
+                '       <td>' + arrayBook[i].getName() + '</td>\n' +
+                '       <td>' + arrayBook[i].getDate() + '</td>\n' +
+                '       <td>' + arrayBook[i].getAmount() + '</td>\n' +
+                '       <td>' + arrayBook[i].isAvailable() + '</td>\n' +
+                '       <td><input type="button" value="Edit" onclick="adjustBookAmount(' + i + ')"></td>\n' +
+                '       <td><input type="button" value=Mượn sách onclick="borrowBookAmount(' + i + ')"></td>\n' +
+                '    </tr>';
+        }
+        tableString += '</table>';
+        document.getElementById("ketQua").innerHTML = tableString;
+
+    }
+
+    function addNewBook() {
+        let flag = true;
+
+        do {
+            var newRegnum = prompt("Nhập mã số sách cần thêm");
+            if (newRegnum < 60000 && newRegnum > 9999) {
+                flag = false
+            } else {
+                alert('Vui lòng nhập lại')
+            }
+        } while (flag);
+        let newName = prompt("Nhập tên sách cần thêm");
+        do {
+            var newDate = prompt(" nhập năm xuất bản cần thêm");
+            if (newDate < 2022 && newDate > 100) {
+                flag = true
+            } else {
+                alert('Vui lòng nhập lại')
+            }
+        } while (flag === false);
+        do {
+            var newAmount = prompt(" nhập số lượng cần thêm");
+            if (newAmount == parseInt(newAmount)) {
+                flag = false
+            } else {
+                alert('Vui lòng nhập lại')
+            }
+        } while (flag);
+        let book = new Book(newRegnum, newName, newDate, newAmount);
+        bookList.push(book);
+        display(bookList);
+    }
+
+    function adjustBookAmount(index) {
+        let flag = true;
+        do {
+            var updateAmount = prompt('Nhập số lượng sách cần thêm');
+            if (updateAmount == parseInt(updateAmount)) {
+                flag = false;
+            }
+        } while (flag);
+        bookList[index].setAmount(updateAmount);
+        display(bookList);
+    }
+
+    function borrowBookAmount(index) {
+        if (bookList[index].getAmount() > 0) {
+            bookList[index].decrease();
+        }
+        else{
+            alert('Sách đã hết');
+        }
+        display(bookList);
+    }
+</script>
+</body>
+</html>

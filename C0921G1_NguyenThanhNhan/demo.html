@@ -8,46 +8,110 @@
 
 <script>
 debugger
-// var matrix = [[]];
-//     for (let row = 0; row < 3; row++) {
+// Bai 1
+// function createArray(arr) {
+//     let flag = true;
+//     let n = 0;
+//     let num = 0;
+//     do {
+//         n = prompt('nhập vào độ dài mảng (<=50)');
+//         if (n <= 50 && n == parseInt(n)) {
+//             flag = false;
+//         }
+//     } while (flag);
 //
-//         for (let column = 0; column < 4; column++) {
-//             matrix[row] [column]= Math.floor((Math.random() * 100) + 1);
+//     for (let i = 0; i < n; i++) {
+//         let flag2 = true;
+//         do {
+//             num = prompt('nhập vào mảng số thứ ' + (i + 1));
+//             if (num == parseInt(num)) {
+//                 flag2 = false;
+//             }
+//         } while (flag2)
+//         if (flag2 === false) {
+//             arr.push( parseInt(num));
 //         }
+//
 //     }
-//     console.log(matrix);
+// }
+//
+// let a= [];
+// createArray(a);
+// let b= [];
+//
+// for (let j=0;j<a.length;j++){
+//     let flag3=true;
+//     if (a[j]>2){
+//         for (let k=2;k<a[j];k++){
+//             if (a[j]%k==0){
+//                 flag3=false;
+//                 break;
+//             }
+//
+//         }
+//         if (flag3){
+//             b.push(a[j]);
+//         }
+//     }else{
+//         b.push(a[j]);
+//     }
+// }
+// alert (a);
+// alert (a.length);
+// alert (b);
 
-// function commonCharacterCount(s1, s2) {
-//     var count = 0;
-//     var str = "";
-//     for (var i = 0; i < s1.length; i++) {
-//         if (s2.indexOf(s1[i]) > -1 && str.indexOf(s1[i]) == -1) {
-//             count++;
-//             str.concat(s1[i])
+//Bai 2
+// let tuSo = [];
+// let mauSo = [];
+// function inputArray(arr){
+//     let num=0;
+//     for (let i = 0; i < 2; i++) {
+//         let flag = true;
+//         do {
+//             num = prompt('nhập vào mảng số thứ ' + (i + 1));
+//             if (num == parseInt(num)) {
+//                 flag = false;
+//             }
+//         } while (flag)
+//         if (flag === false) {
+//             arr.push( parseInt(num));
 //         }
+//
 //     }
+// }
+// inputArray(tuSo)
+// inputArray(mauSo)
+//
+// let quyDong1= (tuSo[0]*mauSo[1])/(mauSo[0]*mauSo[1]);
+// let quyDong2= (tuSo[1]*mauSo[0])/(mauSo[1]*mauSo[0]);
+// if (quyDong1===quyDong2){
+//     alert('Hai phân số bằng nhau');
+// }else{
+//     alert('Hai phân số không bằng nhau');
+//
+// }
+// console.log(commonCharacterCount("aabcc", "adcaa"));
+// function commonCharacterCount(s1, s2) {
+//     let count = [];
+//     s1 = s1.split('');
+//     s2 = s2.split('');
+//
+//     s1.forEach(e => {
+//         if (s2.includes(e)) {
+//             count++
+//             s2.splice(s2.indexOf(e), 1);
+//         }
+//     });
 //
 //     return count;
 // }
-
-console.log(commonCharacterCount("aabcc", "adcaa"));
-function commonCharacterCount(s1, s2) {
-    let count = [];
-    s1 = s1.split('');
-    s2 = s2.split('');
-
-    s1.forEach(e => {
-        if (s2.includes(e)) {
-            count++
-            s2.splice(s2.indexOf(e), 1);
-        }
-    });
-
-    return count;
-}
-
-console.log(commonCharacterCount("aabcc", "adcaa"));
-
+//
+// console.log(commonCharacterCount("aabcc", "adcaa"));
+//     document.write(2+4+'1')
+debugger
+    let a=[1,2,3];
+let b = a.push(5);
+alert(b);
 </script>
 </body>
 </html>
